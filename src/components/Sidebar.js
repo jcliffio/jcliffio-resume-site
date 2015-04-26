@@ -21,7 +21,7 @@ var Sidebar = React.createClass({
     var sidebarClassName = this.props.isOpen ? "sidebar" : "sidebar sidebar--hidden";
     return (
       <div className={sidebarClassName}>
-        <button className="sidebar__closer" onClick={this.handleToggle.bind(this, false)}>Close</button>
+      <div className="sidebar__closer" onClick={this.handleToggle.bind(this, false)}></div>
         <ul className="sidebar__navlinks">
           <li><Link to="/">Home</Link></li>
           <li><Link to="about">About</Link></li>

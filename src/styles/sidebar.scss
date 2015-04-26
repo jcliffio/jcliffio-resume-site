@@ -15,7 +15,11 @@
 
   .sidebar__closer {
     margin: 15px 0 0 15px;
-
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/right-arrow.svg);
+    background-size: 100%;
+    cursor: pointer;
   }
 
   .sidebar__navlinks {
