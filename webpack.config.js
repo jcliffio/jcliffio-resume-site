@@ -6,6 +6,7 @@
  */
 'use strict';
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 
@@ -48,20 +49,21 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'react-hot!babel-loader'
     }, {
-      test: /\.scss/,
-      loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded'
+      test: /\.scss$/,
+      loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
     }, {
       test: /\.css$/,
-      loader: 'style-loader!css-loader'
+      loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
     }, {
-      test: /\.(png|jpg|svg)$/,
+      test: /\.(otf|eot|png|svg|ttf|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       loader: 'url-loader?limit=8192'
     }]
   },
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new ExtractTextPlugin('bundle.css', { allChunks: true })
   ]
 
 };

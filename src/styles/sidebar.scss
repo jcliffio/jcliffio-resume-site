@@ -1,6 +1,5 @@
 .sidebar {
   position: fixed;
-  font-size: 32px;
   right: 0;
   top: 0;
   bottom: 0;
@@ -13,17 +12,39 @@
     right: -300px;
   }
 
-  .sidebar__closer {
-    margin: 15px 0 0 15px;
-    width: 35px;
-    height: 35px;
-    background-image: url(../images/right-arrow.svg);
-    background-size: 100%;
-    cursor: pointer;
+  .sidebar__header {
+    margin: 15px;
+    color: #fff;
+    font-size: 26px;
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .sidebar__closer {
+      float: left;
+      cursor: pointer;
+    }
+
+    .sidebar__socialLinks {
+      float: right;
+
+      a {
+        &:active {
+          color: white;
+        }
+        &:visited {
+          color: white;
+        }
+      }
+    }
   }
 
-  .sidebar__navlinks {
+  .sidebar__navLinks {
     margin-top: 35px 0 0 0;
+    font-size: 32px;
 
     li {
       list-style-type: none;
@@ -32,6 +53,10 @@
       a {
         color: white;
         text-decoration: none;
+
+        &.active {
+          color: #e74c3c;
+        }
       }
     }
   }

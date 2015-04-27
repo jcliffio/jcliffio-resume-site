@@ -3,6 +3,7 @@
 var React = require('react/addons');
 var Router = require('react-router');
 var Sidebar = require('./Sidebar.js');
+var Icon = require('react-fa');
 var ReactTransitionGroup = React.addons.TransitionGroup;
 
 var { RouteHandler } = Router;
@@ -25,7 +26,9 @@ var App = React.createClass({
   render: function () {
     return (
       <div>
-        <div className="sidebarOpener" onClick={this.handleSidebarToggle.bind(this, true)}></div>
+        <div className="sidebarOpener" onClick={this.handleSidebarToggle.bind(this, true)}>
+          <Icon name="bars" />
+        </div>
         <Sidebar
           isOpen={this.state.isSidebarOpen}
           onToggle={this.handleSidebarToggle}
