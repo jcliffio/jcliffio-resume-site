@@ -10,14 +10,15 @@ require('../styles/sidebar.scss');
 
 var socialLinks = [
   { iconName: "linkedin", url: "http://www.linkedin.com/in/jcliffio" },
-  { iconName: "github", url: "https://github.com/jcliffio" }
+  { iconName: "github", url: "https://github.com/jcliffio" },
+  { iconName: "codepen", url: "http://codepen.io/jrclifford/" }
 ];
 
 var navLinks = [
   { text: "Home", route: "/" },
   { text: "About", route: "about" },
   { text: "Projects", route: "projects" },
-  { text: "Contact", route: "contact" },
+  { text: "Contact", route: "contact" }
 ];
 
 var Sidebar = React.createClass({
@@ -46,7 +47,7 @@ var Sidebar = React.createClass({
     });
   },
 
-  render: function () {
+  render () {
     var sidebarClassName = this.props.isOpen ? "sidebar" : "sidebar sidebar--hidden";
     return (
       <div className={sidebarClassName}>

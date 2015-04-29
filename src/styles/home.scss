@@ -1,0 +1,30 @@
+.homePage {
+  .homePage__hello {
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    .hello__hi, .hello__introduction {
+      color: #2980b9;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    .hello__hi {
+      font-size: 80px;
+    }
+
+    .hello__introduction {
+      font-size: 45px;
+    }
+  }
+
+  .homePage_portrait {
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 500px;
+    }
+  }
+}

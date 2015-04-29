@@ -30,12 +30,17 @@
 
     .sidebar__socialLinks {
       float: right;
+      color: white;
 
       a {
         &:active {
           color: white;
         }
         &:visited {
+          color: white;
+        }
+
+        span.fa {
           color: white;
         }
       }
@@ -51,11 +56,13 @@
       padding: 10px 0;
 
       a {
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
         color: white;
         text-decoration: none;
 
         &.active {
-          color: #e74c3c;
+          color: #2980b9;
         }
       }
     }
