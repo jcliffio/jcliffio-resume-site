@@ -1,0 +1,26 @@
+.about {
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 80px;
+
+  p {
+    text-align: center;
+    line-height: 1.8em;
+    font-size: 24px;
+    color: #1d1d1d;
+    margin: 0 0 20px 0;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        transform: scale(2);
+      }
+      &:active {
+        color: #2980b9;
+      }
+      &:visited {
+        color: #2980b9;
+      }
+    }
+  }
+}

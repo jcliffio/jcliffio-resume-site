@@ -1,6 +1,8 @@
-.homePage {
-  .homePage__hello {
-    margin-top: 50px;
+.welcome {
+  margin-bottom: 100px;
+
+  .welcome__hello {
+    padding-top: 50px;
 
     .hello__hi, .hello__introduction {
       color: #2980b9;
@@ -18,12 +20,16 @@
     }
   }
 
-  .homePage_portrait {
+  .welcome_portrait {
     img {
       display: block;
       margin-left: auto;
       margin-right: auto;
-      width: 500px;
+      width: 400px;
+
+      @media screen and (min-width: 768px) {
+        width: 500px;
+      }
     }
   }
 }

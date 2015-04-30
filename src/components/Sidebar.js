@@ -1,10 +1,11 @@
 'use strict';
 
-var React = require('react');
-var Router = require('react-router');
-var Icon = require('react-fa');
+var React = require('react'),
+    Router = require('react-router'),
+    Icon = require('react-fa'),
+    Scroll = require('react-scroll');
 
-var { Link } = Router;
+var ScrollLink = Scroll.Link;
 
 require('../styles/sidebar.scss');
 
@@ -15,10 +16,10 @@ var socialLinks = [
 ];
 
 var navLinks = [
-  { text: "Home", route: "/" },
-  { text: "About", route: "about" },
-  { text: "Projects", route: "projects" },
-  { text: "Contact", route: "contact" }
+  { text: "Home", elementName: "welcome" },
+  { text: "About", elementName: "about" },
+  { text: "Projects", elementName: "projects" },
+  { text: "Contact", elementName: "contact" }
 ];
 
 var Sidebar = React.createClass({
@@ -32,17 +33,17 @@ var Sidebar = React.createClass({
   },
 
   renderSocialLinks () {
-    return socialLinks.map((link, index) => {
+    return socialLinks.map((socialLink, index) => {
       return (
-        <a key={link.url} href={link.url} target="_blank"><Icon name={link.iconName} fixedWidth={true} /></a>
+        <a key={socialLink.url} href={socialLink.url} target="_blank"><Icon name={socialLink.iconName} fixedWidth={true} /></a>
       );
     });
   },
 
   renderNavLinks () {
-    return navLinks.map((link, index) => {
+    return navLinks.map((navLink, index) => {
       return (
-        <li key={link.text}><Link to={link.route}>{link.text}</Link></li>
+        <li key={navLink.text}><ScrollLink to={navLink.elementName} smooth={true} duration={300}>{navLink.text}</ScrollLink></li>
       );
     });
   },

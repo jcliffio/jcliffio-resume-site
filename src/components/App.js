@@ -1,16 +1,13 @@
 'use strict';
 
-var React = require('react/addons');
-var Router = require('react-router');
-var Sidebar = require('./Sidebar.js');
-var Icon = require('react-fa');
-var ReactTransitionGroup = React.addons.TransitionGroup;
-
-var { RouteHandler } = Router;
+var React = require('react/addons'),
+    Icon = require('react-fa'),
+    Sidebar = require('./Sidebar.js'),
+    HomePage = require('./HomePage.js');
 
 // CSS
 require('normalize.css');
-require('../styles/main.scss');
+require('../styles/app.scss');
 
 var App = React.createClass({
   getInitialState () {
@@ -26,15 +23,15 @@ var App = React.createClass({
   render: function () {
     return (
       <div>
-        <div className="sidebarOpener" onClick={this.handleSidebarToggle.bind(this, true)}>
-          <Icon name="bars" />
-        </div>
-        <Sidebar
-          isOpen={this.state.isSidebarOpen}
-          onToggle={this.handleSidebarToggle}
-        />
-        <div className="Content">
-          <RouteHandler/>
+      <div className="sidebarOpener" onClick={this.handleSidebarToggle.bind(this, true)}>
+        <Icon name="bars" />
+      </div>
+      <Sidebar
+        isOpen={this.state.isSidebarOpen}
+        onToggle={this.handleSidebarToggle}
+      />
+        <div className="content">
+          <HomePage />
         </div>
       </div>
     );

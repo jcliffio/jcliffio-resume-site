@@ -1,10 +1,17 @@
 'use strict';
 
-var React = require('react');
+var React = require('react'),
+    Scroll = require('react-scroll');
+
+var ScrollElement = Scroll.Element;
 
 var Projects = React.createClass({
   render: function () {
-    return (<h1>Projects</h1>);
+    return (
+      <ScrollElement name="projects" className="projects">
+        <h1>Projects</h1>
+      </ScrollElement>
+    );
   }
 });
 
