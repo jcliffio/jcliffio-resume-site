@@ -4,7 +4,9 @@ var React = require('react');
 
 var Welcome = require('./Welcome.js'),
     About = require('./About.js'),
+    Skills = require('./Skills.js'),
     Projects = require('./Projects.js'),
+    Experience = require('./Experience.js'),
     Contact = require('./Contact.js');
 
 var HomePage = React.createClass({
@@ -13,7 +15,8 @@ var HomePage = React.createClass({
       <div className="homePage">
         <Welcome />
         <About />
-        <Projects />
+        <Skills />
+        <Experience />
         <Contact />
       </div>
     );

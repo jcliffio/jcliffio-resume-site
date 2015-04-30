@@ -18,7 +18,9 @@ var socialLinks = [
 var navLinks = [
   { text: "Home", elementName: "welcome" },
   { text: "About", elementName: "about" },
-  { text: "Projects", elementName: "projects" },
+  { text: "Skills", elementName: "skills" },
+  //{ text: "Projects", elementName: "projects" },
+  { text: "Experience", elementName: "experience" },
   { text: "Contact", elementName: "contact" }
 ];
 

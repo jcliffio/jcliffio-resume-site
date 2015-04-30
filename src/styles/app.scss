@@ -12,8 +12,10 @@ body {
   width: auto;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 10px;
 
   @media screen and (min-width: 768px) {
+    padding: 0;
     width: 750px;
   }
   @media screen and (min-width: 992px) {
@@ -26,13 +28,13 @@ body {
 
 .sidebarOpener {
   font-size: 32px;
-  color: #1d1d1d;
+  color: #2c3e50;
   position: fixed;
   top: 20px;
   right: 20px;
   cursor: pointer;
 }
 
-.projects, .contact {
+.skills, .projects, .experience, .contact {
   height: 400px;
 }
