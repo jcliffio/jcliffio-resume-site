@@ -35,7 +35,10 @@ var About = React.createClass({
         </p>
         <p>
           I graduated in 2013 from <ExternalLink url="http://www.murraystate.edu" text="Murray State University" /> with a Bachelor&#39;s Degree in Computer Science.
-          While at Murray, I tried to keep my education broad by experimenting with many different domains and technologies, namely web development, .NET, Android, and Arduino.
+          While at Murray, I tried to keep my education broad by experimenting in different technologies, namely .NET, Android, Arduino.
+        </p>
+        <p>
+          Post-college, I have narrowed my focus to primarily web development. I love all aspects of web development both frontend and backend. From CSS to APIs, web development is such a vibrant and varied domain, it is next to impossible to get bored with it.
         </p>
       </ScrollElement>
     );
