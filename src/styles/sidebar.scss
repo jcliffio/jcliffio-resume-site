@@ -3,7 +3,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: #444;
+  background-color: #e74c3c;
   width: 300px;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -30,18 +30,18 @@
 
     .sidebar__socialLinks {
       float: right;
-      color: white;
+      color: #fff;
 
       a {
         &:active {
-          color: white;
+          color: #fff;
         }
         &:visited {
-          color: white;
+          color: #fff;
         }
 
         span.fa {
-          color: white;
+          color: #fff;
         }
       }
     }
@@ -58,7 +58,7 @@
       a {
         font-family: 'Lato', sans-serif;
         font-weight: 500;
-        color: white;
+        color: #fff;
         text-decoration: none;
 
         &.active {

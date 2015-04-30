@@ -1,10 +1,14 @@
 'use strict';
 
-var React = require('react');
+var React = require('react'),
+    About = require('./About.js'),
+    Projects = require('./Projects.js'),
+    Contact = require('./Contact.js');
 
 require('../styles/home.scss');
 
 var Home = React.createClass({
+
   renderHello () {
     return (
       <div className="homePage__hello">
@@ -17,8 +21,8 @@ var Home = React.createClass({
   renderSelfPortrait () {
     return (
       <div className="homePage_portrait">
-        <img src="/images/self-portrait.svg" alt="svg y u no load???" />
-        </div>
+        <img id="portrait" src="/images/self-portrait.svg" alt="svg y u no load???" />
+      </div>
     );
   },
 
@@ -27,6 +31,9 @@ var Home = React.createClass({
       <div className="homePage">
         {this.renderHello()}
         {this.renderSelfPortrait()}
+        <About />
+        <Projects />
+        <Contact />
       </div>
     );
   }

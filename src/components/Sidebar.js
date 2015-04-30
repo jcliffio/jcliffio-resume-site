@@ -34,7 +34,7 @@ var Sidebar = React.createClass({
   renderSocialLinks () {
     return socialLinks.map((link, index) => {
       return (
-        <a href={link.url} target="_blank"><Icon name={link.iconName} fixedWidth={true} /></a>
+        <a key={link.url} href={link.url} target="_blank"><Icon name={link.iconName} fixedWidth={true} /></a>
       );
     });
   },
@@ -42,7 +42,7 @@ var Sidebar = React.createClass({
   renderNavLinks () {
     return navLinks.map((link, index) => {
       return (
-        <li><Link to={link.route}>{link.text}</Link></li>
+        <li key={link.text}><Link to={link.route}>{link.text}</Link></li>
       );
     });
   },
