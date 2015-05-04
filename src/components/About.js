@@ -38,7 +38,10 @@ var About = React.createClass({
           While at Murray, I tried to keep my education broad by experimenting in different technologies, namely .NET, Android, Arduino.
         </p>
         <p>
-          Post-college, I have narrowed my focus to primarily web development. I love all aspects of web development both frontend and backend. From CSS to APIs, web development is such a vibrant and varied domain, it is next to impossible to get bored with it.
+          Post-college, I have narrowed my focus to primarily web development. I love all aspects of it, both front end and back end. From CSS to APIs, webdev is such a vibrant and varied domain, I find it next to impossible to get bored with it.
+        </p>
+        <p>
+          The bulk of my professional work so far has been in ASP.NET MVC and .NET in general; however, I have begun branching out into other areas of web development, namely JS frameworks and front end design.
         </p>
       </ScrollElement>
     );

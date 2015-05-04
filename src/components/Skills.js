@@ -3,6 +3,8 @@
 var React = require('react'),
     Scroll = require('react-scroll');
 
+require('../styles/skills.scss');
+
 var ScrollElement = Scroll.Element;
 
 var skillCategories = [
@@ -59,9 +61,15 @@ var Skills = React.createClass({
 
   mapSkillCategoriesToDiv (category, index) {
     return (
-      <div>
-        <h3>{category.name}</h3>
-        <ul>{category.skills.map(this.mapSkillsToList)}</ul>
+      <div className="skillsContainer">
+        <div className="skillsContainer__header">
+          <h3>{category.name}</h3>
+        </div>
+        <div className="skillsContainer__body">
+          <ul>
+            {category.skills.map(this.mapSkillsToList)}
+          </ul>
+        </div>
       </div>
     );
   },
@@ -69,8 +77,10 @@ var Skills = React.createClass({
   render () {
     return (
       <ScrollElement name="skills" className="skills">
-        <h2>Skills</h2>
-        {skillCategories.map(this.mapSkillCategoriesToDiv)}
+        <h2>Some stuff I&#39;m experienced in...</h2>
+        <div ref="skillCategoriesContainer">
+          {skillCategories.map(this.mapSkillCategoriesToDiv)}
+        </div>
       </ScrollElement>
     );
   }
