@@ -1,3 +1,5 @@
+@import 'variables';
+
 .welcome {
   margin-bottom: 100px;
 
@@ -5,8 +7,8 @@
     padding-top: 50px;
 
     .hello__hi, .hello__introduction {
-      color: #2980b9;
-      font-family: 'Lato', sans-serif;
+      color: $blue;
+      font-family: $lato;
       font-weight: 300;
       text-align: center;
     }
@@ -28,7 +30,7 @@
       width: 100%;
       transform: translateX(-15px);
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: $screen-width-md) {
         width: 500px;
       }
     }

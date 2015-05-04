@@ -1,27 +1,35 @@
+@import 'variables';
+@import 'animations';
+
 .about {
-  font-family: 'Lato', sans-serif;
+  font-family: $lato;
   margin-bottom: 80px;
 
   p {
     text-align: center;
     line-height: 1.8em;
     font-size: 22px;
-    color: #1d1d1d;
+    color: $black;
     margin: 0 0 20px 0;
 
     a {
+      display: inline-block;
+      //vertical-align: middle;
       text-decoration: none;
-      color: #2980b9;
+      color: $blue;
       font-weight: 700;
+      transition: all .3s;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
 
-      &:hover {
-        transform: scale(2);
+      &:hover, &:focus, &:active {
+        @include bob();
       }
       &:active {
-        color: #2980b9;
+        color: $blue;
       }
       &:visited {
-        color: #2980b9;
+        color: $blue;
       }
     }
   }

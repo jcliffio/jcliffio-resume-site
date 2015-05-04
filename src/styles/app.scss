@@ -1,4 +1,4 @@
-/* main */
+@import 'variables';
 
 html, body {
   width: 100%;
@@ -14,21 +14,21 @@ body {
   margin-right: auto;
   padding: 0 10px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $screen-width-md) {
     padding: 0;
     width: 750px;
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: $screen-width-lg) {
     width: 970px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $screen-width-xl) {
     width: 1170px;
   }
 }
 
 .sidebarOpener {
   font-size: 32px;
-  color: #2c3e50;
+  color: $dark-blue;
   position: fixed;
   top: 20px;
   right: 20px;

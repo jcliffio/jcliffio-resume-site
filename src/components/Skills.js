@@ -31,8 +31,7 @@ var skillCategories = [
     skills: [
       "HTML5",
       "SASS/LESS/CSS",
-      "Javascript",
-      "jQuery",
+      "Javascript/jQuery",
       "Node/NPM",
       "Grunt/Gulp",
       "React",
