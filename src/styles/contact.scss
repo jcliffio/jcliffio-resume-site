@@ -1,5 +1,41 @@
 @import 'variables';
+@import 'animations';
+@import 'mixins';
 
 .contact {
   font-family: $lato;
+
+  p {
+    text-align: center;
+
+    a {
+      @include external-link($blue);
+      font-weight: 700;
+    }
+  }
+
+  .socialLinks {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+
+      &:hover, &:focus, &:active {
+        @include bob();
+      }
+      &:active {
+        color: $black;
+      }
+      &:visited {
+        color: $black;
+      }
+
+      span.fa {
+        color: $black;
+      }
+    }
+  }
 }

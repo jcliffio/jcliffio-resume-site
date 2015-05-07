@@ -9,6 +9,7 @@
   width: 300px;
   -webkit-transition: all .3s;
   transition: all .3s;
+  z-index: 2;
 
   &.sidebar--hidden {
     right: -300px;

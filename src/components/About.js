@@ -1,24 +1,12 @@
 'use strict';
 
 var React = require('react'),
-    Scroll = require('react-scroll');
+    Scroll = require('react-scroll'),
+    ExternalLink = require('./ExternalLink.js');
 
 var ScrollElement = Scroll.Element;
 
 require('../styles/about.scss');
-
-var ExternalLink = React.createClass({
-  propTypes: {
-    url: React.PropTypes.string,
-    text: React.PropTypes.string
-  },
-
-  render () {
-    return (
-      <a target="_blank" href={this.props.url}>{this.props.text}</a>
-    );
-  }
-});
 
 var About = React.createClass({
   calculateAge () {

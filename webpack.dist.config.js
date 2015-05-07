@@ -6,7 +6,8 @@
 
 'use strict';
 
-var webpack = require('webpack');
+var webpack = require('webpack'),
+    ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 
@@ -29,7 +30,8 @@ module.exports = {
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.AggressiveMergingPlugin()
+    new webpack.optimize.AggressiveMergingPlugin(),
+    new ExtractTextPlugin('bundle.css', { allChunks: true })
   ],
 
   resolve: {
@@ -53,15 +55,18 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'babel-loader'
-    }, {
+      loader: 'react-hot!babel-loader'
+    },
+    {
+      test: /\.scss$/,
+      loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
+    },
+    {
       test: /\.css$/,
-      loader: 'style-loader!css-loader'
-    }, {
-      test: /\.scss/,
-      loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded'
-    }, {
-      test: /\.(png|jpg)$/,
+      loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+    },
+    {
+      test: /\.(otf|eot|png|svg|ttf|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       loader: 'url-loader?limit=8192'
     }]
   }

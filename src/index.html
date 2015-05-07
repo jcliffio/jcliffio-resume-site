@@ -7,14 +7,105 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="assets/bundle.css" />
-  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+    .svg-loader {
+      margin: 24px auto;
+      display: block;
+      -webkit-animation: svg-rotate 8000ms linear infinite;
+              animation: svg-rotate 8000ms linear infinite;
+    }
+
+    .svg-loader circle {
+      fill: transparent;
+      stroke: #2980b9;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 0, 301.59289;
+      -webkit-animation: stroke-dash 2000ms linear infinite, stroke-width 2000ms linear infinite, stroke-color 8000ms steps(4) infinite;
+              animation: stroke-dash 2000ms linear infinite, stroke-width 2000ms linear infinite, stroke-color 8000ms steps(4) infinite;
+    }
+
+    @-webkit-keyframes svg-rotate {
+      to {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+      }
+    }
+
+    @keyframes svg-rotate {
+      to {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+      }
+    }
+    @-webkit-keyframes stroke-width {
+      0%, 100% {
+        stroke-width: 0;
+      }
+      45%, 55% {
+        stroke-width: 2;
+      }
+      50% {
+        stroke-width: 4;
+      }
+    }
+    @keyframes stroke-width {
+      0%, 100% {
+        stroke-width: 0;
+      }
+      45%, 55% {
+        stroke-width: 2;
+      }
+      50% {
+        stroke-width: 4;
+      }
+    }
+    @-webkit-keyframes stroke-dash {
+      0% {
+        stroke-dasharray: 0, 301.59289;
+        stroke-dashoffset: 0;
+      }
+      50% {
+        stroke-dasharray: 301.59289, 0;
+        stroke-dashoffset: 0;
+      }
+      100% {
+        stroke-dasharray: 301.59289, 301.59289;
+        stroke-dashoffset: -301.59289;
+      }
+    }
+    @keyframes stroke-dash {
+      0% {
+        stroke-dasharray: 0, 301.59289;
+        stroke-dashoffset: 0;
+      }
+      50% {
+        stroke-dasharray: 301.59289, 0;
+        stroke-dashoffset: 0;
+      }
+      100% {
+        stroke-dasharray: 301.59289, 301.59289;
+        stroke-dashoffset: -301.59289;
+      }
+    }
+    @-webkit-keyframes stroke-color {
+      from {
+        stroke: #2980b9;
+      }
+    }
+    @keyframes stroke-color {
+      from {
+        stroke: #2980b9;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!--[if lt IE 8]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
   <div id="app">
-    <h1>If you can see this, something is broken (or JS is not enabled)!!.</h1>
+    <svg class="svg-loader" width=200 height=200>
+      <circle cx=100 cy=100 r=50 />
+    </svg>
   </div>
   <script type="text/javascript" src="assets/main.js"></script>
 </body>

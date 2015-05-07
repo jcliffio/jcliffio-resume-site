@@ -1,10 +1,10 @@
 @import 'variables';
 
 .welcome {
+  margin-top: 50px;
   margin-bottom: 100px;
 
   .welcome__hello {
-    padding-top: 50px;
 
     .hello__hi, .hello__introduction {
       color: $blue;

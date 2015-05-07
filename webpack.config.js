@@ -5,8 +5,8 @@
  * the subfolder /webpack-dev-server/ is visited. Visiting the root will not automatically reload.
  */
 'use strict';
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var webpack = require('webpack'),
+    ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 
@@ -44,20 +44,25 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'jsxhint'
     }],
-    loaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'react-hot!babel-loader'
-    }, {
-      test: /\.scss$/,
-      loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
-    }, {
-      test: /\.css$/,
-      loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
-    }, {
-      test: /\.(otf|eot|png|svg|ttf|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-      loader: 'url-loader?limit=8192'
-    }]
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'react-hot!babel-loader'
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
+      },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+      },
+      {
+        test: /\.(otf|eot|png|svg|ttf|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader?limit=8192'
+      }
+    ]
   },
 
   plugins: [

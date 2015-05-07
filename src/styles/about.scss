@@ -1,5 +1,5 @@
 @import 'variables';
-@import 'animations';
+@import 'mixins';
 
 .about {
   font-family: $lato;
@@ -13,24 +13,8 @@
     margin: 0 0 20px 0;
 
     a {
-      display: inline-block;
-      //vertical-align: middle;
-      text-decoration: none;
-      color: $blue;
+      @include external-link($blue);
       font-weight: 700;
-      transition: all .3s;
-      -webkit-transform: translateZ(0);
-      transform: translateZ(0);
-
-      &:hover, &:focus, &:active {
-        @include bob();
-      }
-      &:active {
-        color: $blue;
-      }
-      &:visited {
-        color: $blue;
-      }
     }
   }
 }

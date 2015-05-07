@@ -20,16 +20,16 @@ var App = React.createClass({
     this.setState({ isSidebarOpen: isOpen });
   },
 
-  render: function () {
+  render () {
     return (
       <div>
-      <div className="sidebarOpener" onClick={this.handleSidebarToggle.bind(this, true)}>
-        <Icon name="bars" />
-      </div>
-      <Sidebar
-        isOpen={this.state.isSidebarOpen}
-        onToggle={this.handleSidebarToggle}
-      />
+        <div className="sidebarOpener" onClick={this.handleSidebarToggle.bind(this, true)}>
+          <Icon name="bars" />
+        </div>
+        <Sidebar
+          isOpen={this.state.isSidebarOpen}
+          onToggle={this.handleSidebarToggle}
+        />
         <div className="content">
           <HomePage />
         </div>

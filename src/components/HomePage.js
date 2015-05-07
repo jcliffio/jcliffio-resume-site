@@ -1,11 +1,7 @@
 'use strict';
 
-var React = require('react');
-
-var Welcome = require('./Welcome.js'),
-    About = require('./About.js'),
-    Skills = require('./Skills.js'),
-    Projects = require('./Projects.js'),
+var React = require('react'),
+    Welcome = require('./Welcome.js'),
     Experience = require('./Experience.js'),
     Contact = require('./Contact.js');
 
@@ -14,8 +10,6 @@ var HomePage = React.createClass({
     return (
       <div className="homePage">
         <Welcome />
-        <About />
-        <Skills />
         <Experience />
         <Contact />
       </div>

@@ -9,56 +9,54 @@ var ScrollElement = Scroll.Element;
 
 var skillCategories = [
   {
-    name: "Concepts",
+    name: 'Concepts',
     skills: [
-      "Agile Developent",
-      "N-Tier Architecture",
-      "Unit Testing",
-      "UI Testing (Selenium)"
+      'OOP',
+      'Agile Developent',
+      'N-Tier Architecture',
+      'Unit Testing',
+      'UI Testing (Selenium)'
     ]
   },
   {
-    name: ".NET",
+    name: '.NET',
     skills: [
-      "ASP.NET MVC/Web API",
-      "Entity Framework",
-      "Ninject",
-      "NHibernate",
-      "NUnit"
+      'ASP.NET MVC/Web API',
+      'Entity Framework',
+      'Ninject',
+      'NHibernate',
+      'NUnit'
     ]
-  },{
-    name: "Front End",
+  },
+  {
+    name: 'Front End',
     skills: [
-      "HTML5",
-      "SASS/LESS/CSS",
-      "Javascript/jQuery",
-      "Node/NPM",
-      "Grunt/Gulp",
-      "React",
-      "Browserify"
+      'HTML5',
+      'SASS/LESS/CSS',
+      'Javascript/jQuery',
+      'Node/NPM',
+      'Grunt/Gulp',
+      'React',
+      'Browserify'
     ]
-  },{
-    name: "Database",
+  },
+  {
+    name: 'Database',
     skills: [
-      "MySql"
+      'MySql'
     ]
-  },{
-    name: "Tools",
+  },
+  {
+    name: 'Tools',
     skills: [
-      "Git",
-      "TFS"
+      'Git',
+      'TFS'
     ]
   },
 ];
 
 var Skills = React.createClass({
-  mapSkillsToList (skill, index) {
-    return (
-      <li>{skill}</li>
-    );
-  },
-
-  mapSkillCategoriesToDiv (category, index) {
+  mapSkills (category) {
     return (
       <div className="skillsContainer">
         <div className="skillsContainer__header">
@@ -66,7 +64,11 @@ var Skills = React.createClass({
         </div>
         <div className="skillsContainer__body">
           <ul>
-            {category.skills.map(this.mapSkillsToList)}
+            {category.skills.map(function(skill){
+              return (
+                <li>{skill}</li>
+              );
+            })}
           </ul>
         </div>
       </div>
@@ -77,8 +79,8 @@ var Skills = React.createClass({
     return (
       <ScrollElement name="skills" className="skills">
         <h2>Some stuff I&#39;m experienced in...</h2>
-        <div ref="skillCategoriesContainer">
-          {skillCategories.map(this.mapSkillCategoriesToDiv)}
+        <div ref="skillCategoriesContainer" className="skillCategoriesContainer">
+          {skillCategories.map(this.mapSkills)}
         </div>
       </ScrollElement>
     );
