@@ -16,7 +16,7 @@ var About = React.createClass({
 
   render () {
     return (
-      <ScrollElement name="about" className="about">
+      <ScrollElement name="about" className="about"> 
         <p>
           ...and I&#39;m a {this.calculateAge()}-year-old software engineer from the little town of <ExternalLink url="https://www.google.com/maps/place/Mayfield,+KY+42066/" text="Mayfield, Ky" />.
           I thoroughly enjoy programming, listening to music (if it&#39;s not playing from my speakers, it&#39;s playing in my head), and spending time with my wife and family.
