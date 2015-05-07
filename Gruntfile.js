@@ -10,6 +10,7 @@ var webpackDistConfig = require('./webpack.dist.config.js'),
 module.exports = function (grunt) {
   // Let *load-grunt-tasks* require everything
   require('load-grunt-tasks')(grunt);
+  grunt.loadNpmTasks('grunt-string-replace');
 
   // Read configuration from package.json
   var pkgConfig = grunt.file.readJSON('package.json');
@@ -103,12 +104,25 @@ module.exports = function (grunt) {
           ]
         }]
       }
+    },
+
+    "string-replace": {
+      files: {
+        src: './dist/index.html',
+        dest: './dist/index.html'
+      },
+      options: {
+        replacements: [{
+          pattern: /(∆analyticsKey∆)/ig,
+          replacement: process.env.gAnalyticsKey
+        }]
+      }
     }
   });
 
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist']);
+      return grunt.task.run(['build', 'string-replace', 'connect:dist']);
     }
 
     grunt.task.run([
