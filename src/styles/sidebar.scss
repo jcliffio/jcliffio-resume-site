@@ -6,7 +6,8 @@
   top: 0;
   bottom: 0;
   background-color: $dark-blue;
-  width: 300px;
+  width: 80%;
+  max-width: 300px;
   -webkit-transition: all .3s;
   transition: all .3s;
   z-index: 2;
